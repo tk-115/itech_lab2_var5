@@ -1,0 +1,37 @@
+/* Базовый контейнер табов */
+.tabs {
+	max-width: 500px;
+	margin: 0 auto;
+}
+/* Стили секций с содержанием */
+.tabs>section {
+	display: none;
+	padding: 15px;
+}
+.tabs>section>p {
+	margin: 0 0 5px;
+}
+/* Прячем чекбоксы */
+.tabs>input {
+	display: none;
+	position: absolute;
+}
+/* Изменения стиля переключателей вкладок при наведении */
+.tabs>label {
+	cursor: pointer;
+	display: block;
+	background-color: #eee;
+	font-size: 19px;
+	color: #616161;
+	text-align: center;
+	padding: 10px;
+}
+.tabs>label:hover,
+.tabs>input:checked+label {
+	background-color: #ccc;
+}
+
+/* Активация секций с помощью псевдокласса :checked */
+ #tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+	display: block;
+} 
